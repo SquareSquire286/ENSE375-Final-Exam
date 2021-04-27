@@ -9,10 +9,9 @@ public class Time24Test
         try
         {
             Time24 time = Time24.toTime24(3, 0, AmPm.pm);
-        } catch (InvalidTimeException e) {}
-        
-        String timeString = time.toString();
-        assertEquals("15:00", timeString);
+            String timeString = time.toString();
+            assertEquals("15:00", timeString);
+        } catch (InvalidTimeException e) {} 
     }
     
     @Test
@@ -21,10 +20,9 @@ public class Time24Test
         try
         {
             Time24 time = Time24.toTime24(12, 27, AmPm.pm);
+            String timeString = time.toString();
+            assertEquals("12:27", timeString);
         } catch (InvalidTimeException e) {}
-        
-        String timeString = time.toString();
-        assertEquals("12:27", timeString);
     }
     
     @Test
@@ -33,10 +31,9 @@ public class Time24Test
         try
         {
             Time24 time = Time24.toTime24(6, 30, AmPm.am);
-        } catch (InvalidTimeException e) {}
-        
-        String timeString = time.toString();
-        assertEquals(" 6:30", timeString);
+            String timeString = time.toString();
+            assertEquals(" 6:30", timeString);
+        } catch (InvalidTimeException e) {}    
     }
     
     @Test
@@ -45,10 +42,9 @@ public class Time24Test
         try
         {
             Time24 time = Time24.toTime24(12, 45, AmPm.am);
-        } catch (InvalidTimeException e) {}
-        
-        String timeString = time.toString();
-        assertEquals(" 0:45", timeString);
+            String timeString = time.toString();
+            assertEquals(" 0:45", timeString);
+        } catch (InvalidTimeException e) {}      
     }
     
     @Test
