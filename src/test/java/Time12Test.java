@@ -90,4 +90,15 @@ public class Time12Test
             assertEquals(690, Time12.subtract(t1, t2));
         } catch (Exception e) {}
     }
+    
+    @Test
+    public void HourEqual_MinuteLess_PMvsAM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(9, 30, AmPm.pm);
+            Time12 t2 = new Time12(9, 30, AmPm.am);
+            assertEquals(720, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
 }
