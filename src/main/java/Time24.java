@@ -59,7 +59,13 @@ public class Time24
 				newHours = 0;
 		}
 
-		time = new Time24(newHours, minutes);
+		try
+		{
+			time = new Time24(newHours, minutes);
+		} catch (InvalidTimeException t)
+		{
+				
+		}
 		
 		return time;
 	}
