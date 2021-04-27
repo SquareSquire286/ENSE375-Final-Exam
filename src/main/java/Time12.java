@@ -27,7 +27,7 @@ public class Time12
 	*/
 	public Time24 toTime24() 
 	{	
-		return Time24.toTime24(this.hours, this.minutes, this.am_pm);;
+		return Time24.toTime24(this.hours, this.minutes, this.am_pm);
 	}
 	/**
 	* returns the hours of 12-hour time format (1:12)
