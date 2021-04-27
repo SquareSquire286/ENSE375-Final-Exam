@@ -212,7 +212,7 @@ public class Time12Test
         } catch (Exception e) {}
     }
     
-    public void HourGreater_MinuteGreater_PMvsAM_Positive()
+    public void HourGreater_MinuteGreater_PMvsAM_Negative()
     {
         try
         {
@@ -223,7 +223,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteLess_PMvsAM_Positive()
+    public void HourGreater_MinuteLess_PMvsAM_Negative()
     {
         try
         {
@@ -234,7 +234,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourLess_MinuteLess_PMvsAM_Positive()
+    public void HourLess_MinuteLess_PMvsAM_Negative()
     {
         try
         {
@@ -245,7 +245,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourLess_MinuteGreater_PMvsAM_Positive()
+    public void HourLess_MinuteGreater_PMvsAM_Negative()
     {
         try
         {
@@ -256,7 +256,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteEqual_PMvsAM_Positive()
+    public void HourGreater_MinuteEqual_PMvsAM_Negative()
     {
         try
         {
@@ -267,7 +267,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourLess_MinuteEqual_PMvsAM_Positive()
+    public void HourLess_MinuteEqual_PMvsAM_Negative()
     {
         try
         {
@@ -278,7 +278,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteGreater_PMvsAM_Positive()
+    public void HourEqual_MinuteGreater_PMvsAM_Negative()
     {
         try
         {
@@ -289,7 +289,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteLess_PMvsAM_Positive()
+    public void HourEqual_MinuteLess_PMvsAM_Negative()
     {
         try
         {
@@ -300,7 +300,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteEqual_PMvsAM_Positive()
+    public void HourEqual_MinuteEqual_PMvsAM_Negative()
     {
         try
         {
@@ -311,7 +311,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteGreater_BothAM_Positive()
+    public void HourGreater_MinuteGreater_BothAM_Negative()
     {
         try
         {
@@ -322,7 +322,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteLess_BothAM_Positive()
+    public void HourGreater_MinuteLess_BothAM_Negative()
     {
         try
         {
@@ -333,7 +333,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteEqual_BothAM_Positive()
+    public void HourGreater_MinuteEqual_BothAM_Negative()
     {
         try
         {
@@ -344,7 +344,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteGreater_BothAM_Positive()
+    public void HourEqual_MinuteGreater_BothAM_Negative()
     {
         try
         {
@@ -355,7 +355,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteGreater_BothPM_Positive()
+    public void HourGreater_MinuteGreater_BothPM_Negative()
     {
         try
         {
@@ -366,7 +366,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteLess_BothPM_Positive()
+    public void HourGreater_MinuteLess_BothPM_Negative()
     {
         try
         {
@@ -377,7 +377,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourGreater_MinuteEqual_BothPM_Positive()
+    public void HourGreater_MinuteEqual_BothPM_Negative()
     {
         try
         {
@@ -388,7 +388,7 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteGreater_BothPM_Positive()
+    public void HourEqual_MinuteGreater_BothPM_Negative()
     {
         try
         {
