@@ -92,13 +92,101 @@ public class Time12Test
     }
     
     @Test
-    public void HourEqual_MinuteLess_PMvsAM_Positive()
+    public void HourEqual_MinuteEqual_PMvsAM_Positive()
     {
         try
         {
             Time12 t1 = new Time12(9, 30, AmPm.pm);
             Time12 t2 = new Time12(9, 30, AmPm.am);
             assertEquals(720, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteGreater_BothAM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 10, AmPm.am);
+            Time12 t2 = new Time12(8, 0, AmPm.am);
+            assertEquals(130, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteLess_BothAM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 0, AmPm.am);
+            Time12 t2 = new Time12(8, 30, AmPm.am);
+            assertEquals(90, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteEqual_BothAM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 0, AmPm.am);
+            Time12 t2 = new Time12(8, 0, AmPm.am);
+            assertEquals(120, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourEqual_MinuteGreater_BothAM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 20, AmPm.am);
+            Time12 t2 = new Time12(10, 15, AmPm.am);
+            assertEquals(5, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteGreater_BothPM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 10, AmPm.pm);
+            Time12 t2 = new Time12(8, 0, AmPm.pm);
+            assertEquals(130, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteLess_BothPM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 0, AmPm.pm);
+            Time12 t2 = new Time12(8, 30, AmPm.pm);
+            assertEquals(90, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourGreater_MinuteEqual_BothPM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 0, AmPm.pm);
+            Time12 t2 = new Time12(8, 0, AmPm.pm);
+            assertEquals(120, Time12.subtract(t1, t2));
+        } catch (Exception e) {}
+    }
+    
+    @Test
+    public void HourEqual_MinuteGreater_BothPM_Positive()
+    {
+        try
+        {
+            Time12 t1 = new Time12(10, 20, AmPm.pm);
+            Time12 t2 = new Time12(10, 15, AmPm.pm);
+            assertEquals(5, Time12.subtract(t1, t2));
         } catch (Exception e) {}
     }
 }
