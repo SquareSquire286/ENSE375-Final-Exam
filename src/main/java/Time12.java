@@ -26,17 +26,8 @@ public class Time12
 	 * Convert time 12-hour to 24-hour
 	*/
 	public Time24 toTime24() 
-	{
-		Time24 newTime;
-		try
-		{
-			newTime = Time24.toTime24(this.hours, this.minutes, this.am_pm);
-		}
-		catch (InvalidTimeException e)
-		{
-		}
-		
-		return newTime;
+	{	
+		return Time24.toTime24(this.hours, this.minutes, this.am_pm);;
 	}
 	/**
 	* returns the hours of 12-hour time format (1:12)
