@@ -212,6 +212,7 @@ public class Time12Test
         } catch (Exception e) {}
     }
     
+    @Test
     public void HourGreater_MinuteGreater_PMvsAM_Negative()
     {
         try
