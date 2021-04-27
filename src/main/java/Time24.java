@@ -58,6 +58,9 @@ public class Time24
 			if (hours == 12)
 				newHours = 0;
 		}
+		
+		if (newHours < 0 || newHours > 12 || minutes < 0 || minutes >= 60)
+			throw new InvalidTimeException();
 
 		try
 		{
