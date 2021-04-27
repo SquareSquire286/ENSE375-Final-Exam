@@ -27,7 +27,7 @@ public class Time12
 	*/
 	public Time24 toTime24() 
 	{
-		Time24 newTime = new Time24(0, 0);
+		Time24 newTime;
 		try
 		{
 			newTime = Time24.toTime24(this.hours, this.minutes, this.am_pm);
