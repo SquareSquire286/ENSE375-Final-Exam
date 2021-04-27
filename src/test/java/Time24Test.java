@@ -38,7 +38,7 @@ public class Time24Test
     @Test
     public void AfternoonTime_MinuteException_Invalid()
     {
-        assertThrows(InvalidTimeException.class, () -> { Time24 time = Time24.toTime24(3, 65, AmPm.pm);});
+        assertThrows(InvalidTimeException.class, () -> { Time24 time = new Time24(3, 65);});
     }
     
     @Test
