@@ -41,7 +41,7 @@ public class Time24
 	 * @see 	https://www.freecodecamp.org/news/mathematics-converting-am-pm-to-24-hour-clock/
 	 * @note	(12 am and 12 pm are special cases)
 	 */
-	public static Time24 toTime24(int hours, int minutes, AmPm am_pm)
+	public static Time24 toTime24(int hours, int minutes, AmPm am_pm) throws InvalidTimeException
 	{
 		Time24 time = null;
 
@@ -59,14 +59,7 @@ public class Time24
 				newHours = 0;
 		}
 
-		try
-		    {
-			time = new Time24(newHours, minutes);
-		    }
-		catch (Exception e)
-		    {
-			System.out.println("Invalid time");
-		    }
+		time = new Time24(newHours, minutes);
 		
 		return time;
 	}
