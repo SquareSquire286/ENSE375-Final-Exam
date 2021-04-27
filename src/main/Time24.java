@@ -48,12 +48,16 @@ public class Time24
 		int newHours = hours;
 
 		if (am_pm == AmPm.pm)
-		    {
+		{
+			if (hours != 12)
+			    newHours = hours + 12;
+		}
+		
+		else
+		{
 			if (hours == 12)
-			    newHours = 0;
-
-			else newHours += 12;
-		    }
+				newHours = 0;
+		}
 
 		try
 		    {
