@@ -94,5 +94,7 @@ public class Time24
 		
 		if (timeString.charAt(3) == ' ')
 		    return timeString.substring(0, 3) + "0" + timeString.substring(4);
+		
+		else return timeString;
 	}
 }
