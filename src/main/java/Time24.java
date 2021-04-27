@@ -90,6 +90,9 @@ public class Time24
 	*/
 	public String toString()
 	{
-		return String.format("%2d:%2d",this.hours,this.minutes);
+		String timeString = String.format("%2d:%2d",this.hours,this.minutes);
+		
+		if (timeString.charAt(3) == ' ')
+		    return timeString.substring(0, 3) + "0" + timeString.substring(4);
 	}
 }
