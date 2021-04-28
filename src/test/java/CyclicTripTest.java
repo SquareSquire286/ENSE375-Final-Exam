@@ -107,7 +107,7 @@ public class CyclicTripTest
     }
     
     @Test
-    public void RoundTrip_IsNotCyclic()
+    public void NoRepeatedDestinations_IsNotCyclic()
     {
         try
         {
