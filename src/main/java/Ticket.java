@@ -97,8 +97,8 @@ public class Ticket
 	    if (schengenAirportCount > 1 && !hasSchengenVisa) // Checks condition #5
 		return false;
 
-	    /*if (Ticket.hasCyclicTrip(ticket)) // Checks condition #6
-	      return false;*/
+	    if (Ticket.hasCyclicTrip(ticket)) // Checks condition #6
+	      return false;
 
 	    for (int i = 0; i < ticket.size() - 1; i ++) // Checks condition #7
 		{
@@ -123,7 +123,7 @@ public class Ticket
 	    
 	    for (int i = 0; i < ticket.size(); i++)
 		{
-		    if (ticket.get(i).getArrivalAirport().equals(ticket.get(0).getDepartureAirport()))
+		    if (i < ticket.size() - 1 && (ticket.get(i).getArrivalAirport().equals(ticket.get(0).getDepartureAirport())))
 			cyclicTripExists = true;
 
 		    for (int j = i + 1; j < ticket.size(); j++)
