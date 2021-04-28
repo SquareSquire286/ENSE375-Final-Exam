@@ -122,11 +122,11 @@ public class Ticket
 	    boolean cyclicTripExists = false;
 	    
 	    for (int i = 0; i < ticket.size(); i++)
-		{
+		{ // a round trip is allowed, but there cannot be any flights after the initial airport is returned to
 		    if (i < ticket.size() - 1 && (ticket.get(i).getArrivalAirport().equals(ticket.get(0).getDepartureAirport())))
 			cyclicTripExists = true;
 
-		    for (int j = i + 1; j < ticket.size(); j++)
+		    for (int j = i + 1; j < ticket.size(); j++) // the same destination cannot appear twice under any circumstances
 			if (ticket.get(i).getArrivalAirport().equals(ticket.get(j).getArrivalAirport()))
 			    cyclicTripExists = true;
 		}
